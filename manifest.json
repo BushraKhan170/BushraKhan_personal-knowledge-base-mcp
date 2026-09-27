@@ -1,0 +1,42 @@
+{
+  "manifest_version": "0.4",
+  "name": "personal-knowledge-base",
+  "display_name": "Personal Knowledge Base",
+  "version": "1.0.0",
+  "description": "Semantic search over my personal knowledge base using Qdrant.",
+  "author": {
+    "name": "Bushra Khan"
+  },
+  "server": {
+    "type": "uv",
+    "entry_point": "server/mcp_server.py",
+    "mcp_config": {
+      "command": "C:\\Users\\786\\.local\\bin\\uv.exe",
+      "args": [
+        "run",
+        "--directory",
+        "${__dirname}",
+        "server/mcp_server.py"
+      ],
+      "env": {
+        "QDRANT_URL": "${user_config.qdrant_url}",
+        "QDRANT_API_KEY": "${user_config.qdrant_api_key}"
+      }
+    }
+  },
+  "user_config": {
+    "qdrant_url": {
+      "type": "string",
+      "title": "Qdrant URL",
+      "description": "Your Qdrant Cloud cluster URL.",
+      "required": true
+    },
+    "qdrant_api_key": {
+      "type": "string",
+      "title": "Qdrant API Key",
+      "description": "Your Qdrant Cloud API key.",
+      "sensitive": true,
+      "required": true
+    }
+  }
+}

@@ -1,0 +1,13 @@
+[project]
+name = "personal-knowledge-base"
+version = "1.0.0"
+description = "Semantic search over a personal knowledge base using Qdrant and MCP"
+requires-python = ">=3.10,<3.15"
+
+dependencies = [
+    "fastmcp==4.0.10",
+    "qdrant-client==1.19.1",
+    "sentence-transformers==6.1.0",
+    "pypdf==6.19.0",
+    "python-dotenv",
+]
