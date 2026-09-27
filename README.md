@@ -591,7 +591,7 @@ Deployment automation
 Automated testing and CI/CD
 
 More detailed analytics for search quality
-
+![MCP Demo](docs/demo.png)
 
 
 Author
